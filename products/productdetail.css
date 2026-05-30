@@ -1,0 +1,144 @@
+/* uses variables from ../css/style.css (no need to redeclare them) */
+
+/* Page wrapper */
+.products-page {
+  background: var(--cream-bg);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Blue container (the "blue box") */
+.products-container {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 24px;
+  padding: 36px;
+  max-width: 1200px;         /* keep container constrained so we don't get 3 columns */
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  color: var(--card-bg);
+}
+
+/* header inside container */
+.products-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.products-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+  color: var(--card-bg);
+}
+
+.products-header .accent-line {
+  width: 84px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--card-bg), rgba(255,255,255,0.6));
+  border-radius: 6px;
+  margin: 0 auto 10px auto;
+}
+
+.products-header .sub {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* Grid: force two columns on desktop */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 columns on wide screens */
+  gap: 24px;
+  align-items: start;
+}
+
+/* Each card is horizontal (image left, info right) */
+.product-card {
+  display: flex;
+  gap: 22px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0; /* padding handled inside items for tighter look */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 260px; /* ensures space for details */
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.16);
+}
+
+/* Image area */
+.product-card img {
+  width: 320px;            /* fairly large horizontal image */
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Info area */
+.product-info {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.product-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.product-info .spec {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #444;
+}
+
+.product-info .desc {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Responsive: one card per row on smaller screens */
+@media (max-width: 1000px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    width: 260px;
+    max-height: 260px;
+  }
+}
+
+/* Small/mobile tweaks: stack image above content to save horizontal space */
+@media (max-width: 540px) {
+  .product-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 220px;
+    max-height: 260px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .product-info {
+    padding: 18px;
+  }
+}

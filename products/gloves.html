@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gloves | Imperial Company</title>
+
+  <!-- global theme + page stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="productdetail.css">
+
+  <!-- fonts (match site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header (same structure as other pages; paths are relative) -->
+  <header>
+    <div class="logo">
+      <img src="../assets/logo.png" alt="Imperial Company Logo">
+    </div>
+
+    <!-- Hamburger button -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../products.html" class="active">Products</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page wrapper with blue panel -->
+  <main class="products-page">
+    <div class="products-container">
+      <header class="products-header">
+        <h1>Gloves</h1>
+        <div class="accent-line"></div>
+        <p class="sub">Hand protection — materials, grips and durability at a glance.</p>
+      </header>
+
+      <section class="product-grid">
+        <!-- Example product card (repeat for each shoe) -->
+        <article class="product-card">
+          <img src="assets/TBA.png" alt="Rocklander">
+          <div class="product-info">
+            <h3>Cotton</h3>
+            <p class="spec"><strong>Material:</strong> Nitrile / Latex / Leather</p>
+            <p class="spec"><strong>Grip:</strong> Textured Palm</p>
+            <p class="spec"><strong>Origin:</strong> Made in India</p>
+            <p class="desc">Flexible and protective — ensures strong grip and hand safety in industrial and workshop environments.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="assets/TBA.png" alt="Rocklander">
+          <div class="product-info">
+            <h3>Nitrile</h3>
+            <p class="spec"><strong>Material:</strong> Nitrile / Latex / Leather</p>
+            <p class="spec"><strong>Grip:</strong> Textured Palm</p>
+            <p class="spec"><strong>Origin:</strong> Made in India</p>
+            <p class="desc">Flexible and protective — ensures strong grip and hand safety in industrial and workshop environments.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="assets/TBA.png" alt="Rocklander">
+          <div class="product-info">
+            <h3>PJ04 Grey</h3>
+            <p class="spec"><strong>Material:</strong> Nitrile / Latex / Leather</p>
+            <p class="spec"><strong>Grip:</strong> Textured Palm</p>
+            <p class="spec"><strong>Origin:</strong> Made in India</p>
+            <p class="desc">Flexible and protective — ensures strong grip and hand safety in industrial and workshop environments.</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../products.html">Products</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-row">
+      <h3>Our Address</h3>
+      <p>16 St, Shuwaikh Industrial, Shuwaikh, Kuwait</p>
+    </div>
+    <div class="footer-row">
+      <h3>Contact Information</h3>
+      <p>Email: imperialkuwait@yahoo.com</p>
+      <p>☏ Phone: +965 2482 9852</p>
+      <p>📞 Mobile: +965 9711 5234</p>
+    </div>
+  </footer>
+
+  <!-- Hamburger script (same used in other pages) -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
